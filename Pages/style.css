@@ -43,7 +43,7 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: 10px; /* reduced font for laws */
+  font-size: 12px; /* general page font */
   color: #4b3621;
 }
 
@@ -97,9 +97,9 @@ body, html {
 /* Law bands */
 .band {
   flex: 1;
-  margin-bottom: 4px;
-  font-size: 10px; /* reduced for fitting 20 laws */
-  line-height: 1.2; /* tighter spacing */
+  margin-bottom: 5px;
+  font-size: 11px; /* slightly reduced for fitting more laws */
+  line-height: 1.25; /* a bit tighter for better spacing */
   color: #4b3621;
 }
 
