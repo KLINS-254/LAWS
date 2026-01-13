@@ -2,7 +2,7 @@ let current = 0;
 const pages = document.querySelectorAll('.page');
 
 function nextPage() {
-  if (current < pages.length - 1) { // prevent overflow
+  if (current < pages.length - 1) {
     pages[current].style.transform = 'rotateY(-180deg)';
     pages[current].style.zIndex = pages.length - current - 1;
     current++;
