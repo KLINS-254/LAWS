@@ -1,28 +1,25 @@
-/* Reset & body */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Cinzel', serif;
-  background: #3b2a1a; /* table surface */
+  background: #3b2a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 
-/* Scene perspective */
 .scene {
   perspective: 2000px;
   margin-top: 20px;
 }
 
-/* Book container */
 .book {
   position: relative;
-  width: 380px; /* slightly smaller for full view */
-  height: 500px; /* adjust for screen */
-  transform: translateZ(-100px) rotateX(10deg) scale(0.9); /* zoomed out */
+  width: 380px;
+  height: 500px;
+  transform: translateZ(-100px) rotateX(10deg) scale(0.9);
   transform-origin: center bottom;
 }
 
@@ -36,32 +33,32 @@ body, html {
   box-sizing: border-box;
   transform-origin: left;
   transition: transform 1s ease;
-  box-shadow:
-    inset 0 0 25px rgba(0,0,0,0.2),
-    0 8px 25px rgba(0,0,0,0.4);
-  overflow: hidden;
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.2), 0 8px 25px rgba(0,0,0,0.4);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  font-size: 12px; /* general page font */
+  font-size: 13px;
   color: #4b3621;
 }
 
 /* Z-index stacking */
-.page:nth-child(1) { z-index: 8; } /* cover */
-.page:nth-child(2) { z-index: 7; } /* page 1 */
-.page:nth-child(3) { z-index: 6; } /* page 2 */
-.page:nth-child(4) { z-index: 5; } /* page 3 */
-.page:nth-child(5) { z-index: 4; } /* page 4 */
-.page:nth-child(6) { z-index: 3; } /* page 5 */
-.page:nth-child(7) { z-index: 2; } /* page 6 */
-.page:nth-child(8) { z-index: 1; } /* page 7 */
+.page:nth-child(1) { z-index: 11; } /* cover */
+.page:nth-child(2) { z-index: 10; }
+.page:nth-child(3) { z-index: 9; }
+.page:nth-child(4) { z-index: 8; }
+.page:nth-child(5) { z-index: 7; }
+.page:nth-child(6) { z-index: 6; }
+.page:nth-child(7) { z-index: 5; }
+.page:nth-child(8) { z-index: 4; }
+.page:nth-child(9) { z-index: 3; }
+.page:nth-child(10) { z-index: 2; }
+.page:nth-child(11) { z-index: 1; }
 
 /* Cover */
 .cover {
   background: #0b2f66;
   color: #ffffff;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -69,66 +66,33 @@ body, html {
   text-align: center;
   letter-spacing: 3px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  z-index: 10;
+  z-index: 12;
 }
 
-.cover-title {
-  text-align: center;
-}
+.cover-title { text-align: center; }
 
-/* Page number */
-.pagenumber {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 6px;
-  color: #0b2f66;
-}
-
-/* Header for laws */
+/* Page header */
 .header {
-  font-size: 14px; /* slightly smaller than before */
+  font-size: 15px;
   font-weight: 700;
   text-decoration: underline;
   margin-bottom: 8px;
   text-align: center;
 }
 
-/* Law bands for regular pages */
+/* Bands */
 .band {
-  flex: 1;
-  margin-bottom: 5px;
-  font-size: 11px; /* slightly reduced for fitting laws */
-  line-height: 1.25;
-  color: #4b3621;
-}
-
-.band:last-child {
-  margin-bottom: 0;
-}
-
-/* Law-heavy pages: slightly smaller font */
-.page:nth-child(3) .band, /* Page 2 */
-.page:nth-child(4) .band, /* Page 3 */
-.page:nth-child(5) .band, /* Page 4 */
-.page:nth-child(6) .band, /* Page 5 */
-.page:nth-child(7) .band  /* Page 6 */ {
-  font-size: 10.5px; /* fits all 20 laws */
+  margin-bottom: 4px;
   line-height: 1.2;
 }
 
-/* Footer */
 .footer {
   text-align: right;
   font-size: 12px;
   font-style: italic;
-  margin-top: 5px;
+  margin-top: 10px;
   color: #0b2f66;
-}
-
-/* Footer text updated */
-.footer::after {
-  content: " By wise TICOH911";
+  flex-shrink: 0;
 }
 
 /* Buttons */
