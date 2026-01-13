@@ -94,17 +94,27 @@ body, html {
   text-align: center;
 }
 
-/* Law bands */
+/* Law bands for regular pages */
 .band {
   flex: 1;
   margin-bottom: 5px;
-  font-size: 11px; /* slightly reduced for fitting more laws */
-  line-height: 1.25; /* a bit tighter for better spacing */
+  font-size: 11px; /* slightly reduced for fitting laws */
+  line-height: 1.25;
   color: #4b3621;
 }
 
 .band:last-child {
   margin-bottom: 0;
+}
+
+/* Law-heavy pages: slightly smaller font */
+.page:nth-child(3) .band, /* Page 2 */
+.page:nth-child(4) .band, /* Page 3 */
+.page:nth-child(5) .band, /* Page 4 */
+.page:nth-child(6) .band, /* Page 5 */
+.page:nth-child(7) .band  /* Page 6 */ {
+  font-size: 10.5px; /* fits all 20 laws */
+  line-height: 1.2;
 }
 
 /* Footer */
@@ -114,6 +124,11 @@ body, html {
   font-style: italic;
   margin-top: 5px;
   color: #0b2f66;
+}
+
+/* Footer text updated */
+.footer::after {
+  content: " By wise TICOH911";
 }
 
 /* Buttons */
