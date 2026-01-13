@@ -3,7 +3,7 @@ body, html {
   padding: 0;
   height: 100%;
   font-family: 'Cinzel', serif;
-  background: #3b2a1a; /* table surface */
+  background: #3b2a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,6 @@ body, html {
   transform-origin: center bottom;
 }
 
-/* Pages */
 .page {
   position: absolute;
   width: 100%;
@@ -33,9 +32,7 @@ body, html {
   box-sizing: border-box;
   transform-origin: left;
   transition: transform 1s ease;
-  box-shadow:
-    inset 0 0 25px rgba(0,0,0,0.2),
-    0 10px 35px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.2), 0 10px 35px rgba(0,0,0,0.5);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -46,7 +43,6 @@ body, html {
   border-right: 2px solid #d8b265;
 }
 
-/* Cover */
 .cover {
   background: #0b2f66;
   color: #ffffff;
@@ -65,7 +61,6 @@ body, html {
   text-align: center;
 }
 
-/* Header */
 .header {
   font-size: 14px;
   font-weight: 700;
@@ -74,13 +69,11 @@ body, html {
   color: #0b2f66;
 }
 
-/* Bands for laws */
 .band {
   flex: none;
   margin-bottom: 4px;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   font-size: 10px;
@@ -89,7 +82,6 @@ body, html {
   color: #0b2f66;
 }
 
-/* Buttons */
 .buttons {
   margin-top: 20px;
 }
