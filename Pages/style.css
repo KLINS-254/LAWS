@@ -1,0 +1,28 @@
+.page {
+  font-size: 10px; /* smaller to fit 20 laws */
+  line-height: 1.2;
+  padding: 15px 20px;
+  flex-direction: column;
+}
+
+.band {
+  flex: none;
+  margin-bottom: 4px;
+}
+
+.header {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #0b2f66;
+}
+
+.footer {
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 6px;
+  color: #0b2f66;
+}
