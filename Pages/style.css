@@ -1,3 +1,4 @@
+/* Reset & body */
 body, html {
   margin: 0;
   padding: 0;
@@ -10,16 +11,18 @@ body, html {
   justify-content: flex-start;
 }
 
+/* Scene perspective */
 .scene {
   perspective: 2000px;
   margin-top: 20px;
 }
 
+/* Book container */
 .book {
   position: relative;
-  width: 380px;
-  height: 500px;
-  transform: translateZ(-100px) rotateX(10deg) scale(0.9);
+  width: 380px; /* slightly smaller for full view */
+  height: 500px; /* adjust for screen */
+  transform: translateZ(-100px) rotateX(10deg) scale(0.9); /* zoomed out */
   transform-origin: center bottom;
 }
 
@@ -36,25 +39,35 @@ body, html {
   box-shadow:
     inset 0 0 25px rgba(0,0,0,0.2),
     0 8px 25px rgba(0,0,0,0.4);
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: 12px;
+  font-size: 10px; /* reduced font for laws */
   color: #4b3621;
 }
+
+/* Z-index stacking */
+.page:nth-child(1) { z-index: 8; } /* cover */
+.page:nth-child(2) { z-index: 7; } /* page 1 */
+.page:nth-child(3) { z-index: 6; } /* page 2 */
+.page:nth-child(4) { z-index: 5; } /* page 3 */
+.page:nth-child(5) { z-index: 4; } /* page 4 */
+.page:nth-child(6) { z-index: 3; } /* page 5 */
+.page:nth-child(7) { z-index: 2; } /* page 6 */
+.page:nth-child(8) { z-index: 1; } /* page 7 */
 
 /* Cover */
 .cover {
   background: #0b2f66;
   color: #ffffff;
-  font-size: 28px;
+  font-size: 42px;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
   z-index: 10;
 }
@@ -63,26 +76,44 @@ body, html {
   text-align: center;
 }
 
-/* Page header */
+/* Page number */
+.pagenumber {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #0b2f66;
+}
+
+/* Header for laws */
 .header {
-  font-size: 16px;
+  font-size: 14px; /* slightly smaller than before */
   font-weight: 700;
   text-decoration: underline;
   margin-bottom: 8px;
   text-align: center;
 }
 
-/* Laws band */
+/* Law bands */
 .band {
   flex: 1;
-  margin-bottom: 6px;
-  font-size: 12px;
-  line-height: 1.4;
+  margin-bottom: 4px;
+  font-size: 10px; /* reduced for fitting 20 laws */
+  line-height: 1.2; /* tighter spacing */
   color: #4b3621;
 }
 
 .band:last-child {
   margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 5px;
+  color: #0b2f66;
 }
 
 /* Buttons */
